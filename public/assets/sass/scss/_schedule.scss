@@ -1,0 +1,42 @@
+.schedule {
+
+    h1 {
+        font-size: 56px;
+        letter-spacing: 1.4px;
+        font-weight: 600;
+
+        span {
+            font-size: 56px;
+        }
+    }
+
+    @media screen and (max-width: $midle-media) {
+        h1 {
+            font-size: 28px;
+            letter-spacing: 1.2px;
+            font-weight: 500 !important;
+
+            span {
+                font-size: revert;
+            }
+        }
+
+        h5 {
+            font-size: 1rem;
+        }
+
+        span {
+            font-size: 1rem;
+        }
+
+    }
+
+    @media screen and (max-width: $md) {
+        h1 {
+            font-size: revert;
+            letter-spacing: 1.1px;
+
+        }
+
+    }
+}

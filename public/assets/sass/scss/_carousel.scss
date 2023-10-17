@@ -1,0 +1,94 @@
+.y-carousel {
+    .carousel-inner {
+        .item-image {
+            //height: 100vh;
+
+
+            @media screen and (max-width: $midle-media) {
+                height: initial;
+            }
+
+            .carousel-caption {
+                position: absolute;
+                padding-top: 1.25rem;
+                padding-bottom: 1.25rem;
+                color: #fff;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+
+                h5 {
+                    font-size: 48px;
+                    font-weight: 700;
+                    font-family: $barlow;
+                    letter-spacing: 1.4px;
+
+                    @media screen and (max-width: $midle-media) {
+                        font-size: 28px;
+                        font-weight: 600;
+                        margin-bottom: 1rem !important;
+
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: 300;
+                    line-height: 2;
+                    letter-spacing: 1.7px;
+
+                    @media screen and (max-width: $midle-media) {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 1.5;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-indicators {
+        button {
+            width: 16px;
+            height: 16px;
+            padding: 0;
+            margin-right: 8px !important;
+            margin-left: 8px !important;
+            text-indent: -999px;
+            cursor: pointer;
+            background-clip: initial;
+            border: 0 !important;
+
+            @media screen and (max-width: $midle-media) {
+                height: 12px;
+                width: 12px;
+            }
+
+        }
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        &:hover {
+            background-color: transparentize($color: $soft-red, $amount: .65);
+        }
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        background-color: $primary-red;
+        padding: 8px;
+
+        @media screen and (max-width: $midle-media) {
+            height: 1.5rem !important;
+            width: 1.5rem !important;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "garage-parrot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -w public/assets/sass/scss/styles.scss public/assets/css/styles.css --source-map"
+  },
+  "keywords": [
+    "Projet"
+  ],
+  "author": "Coding City",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.63.6"
+  }
+}

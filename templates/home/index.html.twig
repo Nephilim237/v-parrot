@@ -1,0 +1,360 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <section class="y-carousel" id="y-carousel">
+        <div id="homeCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active bg-red" aria-current="true"
+                        aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" class="bg-red" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" class="bg-red" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item item-image active">
+                    <img src="assets/images/carousel/carousel-b.webp" class="d-block w-100" alt="Bentley Mulsanne">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container h-100 text-start">
+
+                            <div class="row h-100 align-items-center">
+                                <div class="col-md-7">
+
+                                    <h5 class="mb-4 text-uppercase">Des Pneus! De l'assurance</h5>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem tempore voluptatem officia corporis,
+                                        beatae aut,
+                                    </p>
+                                    <a href="#" class="btn btn-danger bg-red border-0 py-lg-3 px-5 rounded-0 text-uppercase fw-bold">Commander dès
+                                        maintenant</a>
+                                </div>
+                                <div class="col-md-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item-image">
+                    <img src="assets/images/carousel/carousel-a.jpg" class="d-block w-100" alt="Ferrari 360">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container h-100 text-start">
+
+                            <div class="row h-100 align-items-center">
+                                <div class="col-md-7">
+                                    <h5 class="mb-4 text-uppercase">Explorer votre voiture de rêve</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque exercitationem rerum assumenda? Facere
+                                        earum
+                                    </p>
+                                    <a href="#" class="btn btn-danger bg-red border-0 py-lg-3 px-5 rounded-0 text-uppercase fw-bold">Commander dès
+                                        maintenant</a>
+                                </div>
+                                <div class="col-md-5">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item-image">
+                    <img src="assets/images/carousel/carousel-c.webp" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container h-100 text-start">
+
+                            <div class="row h-100 align-items-center">
+                                <div class="col-md-5">
+                                </div>
+                                <div class="col-md-7">
+                                    <h5 class="mb-4 text-uppercase">Des Pneus! De l'assurance</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptate animi voluptates? Ducimus sequi
+                                        reiciendis
+                                    </p>
+                                    <a href="#" class="btn btn-danger bg-red border-0 py-lg-3 px-5 rounded-0 text-uppercase fw-bold">Commander dès
+                                        maintenant</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="schedule bg-red py-5">
+        <div class="container">
+            <div class="row">
+                <h1 class="barlow text-center mb-lg-5 mb-3 d-flex align-items-center justify-content-center gap-md-3">
+                    <span class="material-icons-outlined"> event</span>
+                    Quand pouvez-vous nous contacter
+                </h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-4 col-12 text-center">
+                    <h5 class="mb-3 fw-700">Jours Ouvrables: </h5>
+                    <p class="d-flex justify-content-center align-items-center gap-2">
+                        <span class="material-icons-outlined">schedule</span> 08h00 - 12h00
+                    </p>
+                    <p class="d-flex justify-content-center align-items-center gap-2">
+                        <span class="material-icons-outlined">schedule</span> 14h00 - 16h00
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 text-center">
+                    <h5 class="mb-3 fw-700">samedi & Jours Feriés: </h5>
+                    <p class="d-flex justify-content-center align-items-center gap-2">
+                        <span class="material-icons-outlined">schedule</span> 08h00 - 12h00
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 text-center">
+                    <h5 class="mb-3 fw-700">Dimanche: </h5>
+                    <p class="d-flex justify-content-center align-items-center gap-2">
+                        <span class="material-icons-outlined">block</span>Fermé.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-services py-120 bg-soft-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-3">
+                    <div class="service-overview pe-5">
+                        <h1>Nos <span class="text-red">Services</span></h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, dolore ipsam. Doloremque!</p>
+                        <div class="services-list-container py-lg-3">
+                            <ul class="services-list list-unstyled">
+                                <li>
+                                    <span class="material-icons-outlined">task_alt</span> Vente des vehicules d'occasion
+                                </li>
+                                <li>
+                                    <span class="material-icons-outlined">task_alt</span> Location de vehicules
+                                </li>
+                                <li>
+                                    <span class="material-icons-outlined">task_alt</span> Service apres vente
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn bg-red rounded-0 btn-lg px-5">Tous nos services</button>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="service-image">
+                        <div class="service-overlay"></div>
+                        <img src="{{ asset('assets/images/about-us/about-us-1.png') }}" alt="Illustration de nos services" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-vehicle py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <h3 class="barlow text-uppercase fw-700 letter-spacing-02">Chercher un véhicule</h3>
+                <p class="fs-5 text-red fw-700">Trouver un véhicule à votre convenance</p>
+            </div>
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-lg-4 col-6 mb-3">
+                    {{ form_row(form.brand) }}
+                </div>
+                <div class="col-lg-4 col-6 mb-3">
+                    {{ form_row(form.type) }}
+                </div>
+                <div class="col-lg-4 col-6 mb-3">
+                    {{ form_row(form.year) }}
+                    <div class="d-flex justify-content-between">
+                        <small id="yearMin"></small>
+                        <small id="yearMax">2023 </small>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-6 mb-3">
+                    {{ form_row(form.price) }}
+                    <div class="d-flex justify-content-between">
+                        <small id="priceMin"> € 0</small>
+                        <small id="priceMax"> </small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6 mb-3">
+                    {{ form_row(form.milliage) }}
+                    <div class="d-flex justify-content-between">
+                        <small id="milliageMin">0 km</small>
+                        <small id="milliageMax"></small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6  my-auto ">
+                    <button type="submit" class="btn btn-danger bg-red border-0 w-100 py-2 rounded-0 fw-bold">Trouver un véhicule</button>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </section>
+
+    <section class="latest-offers bg-soft-white py-120">
+        <div class="container">
+            <div class="row">
+                <h1 class="barlow mb-md-5 text-center">Découvrez nos <span class="text-red">offres</span> récentes</h1>
+            </div>
+            <div class="row">
+                {% for vehicle in vehicles %}
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card border-0">
+                            <div class="card-header border-0 bg-transparent p-2">
+                                <img src="{{ asset('upload/images/vehicles-illustration/' ~ vehicle.image) }}" class="card-img-top rounded-2"
+                                     alt="Images de véhicules">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-700 mb-3">{{ vehicle.brand }}</h5>
+                                <ul class="car-spec list-unstyled">
+                                    <li>
+                                        <span class="material-icons-outlined">directions_car</span>
+                                        {{ vehicle.model }}
+                                    </li>
+                                    <li>
+                                        <span class="material-icons-outlined">speed</span>
+                                        {{ vehicle.milliage }} KM
+                                    </li>
+                                    <li>
+                                        <span class="material-icons-sharp">ev_station</span>
+                                        {{ vehicle.vehicleType.type }}
+                                    </li>
+                                    <li>
+                                        <span class="material-icons-sharp">today</span>
+                                        {{ vehicle.year }}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 bg-transparent">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fw-900 text-red fs-5">${{ vehicle.price }} </span>
+                                    <a href="{{ path('vehicle_details', { slug: vehicle.slug }) }}" class="btn bg-red rounded-0 fw-600">Plus de
+                                        détails</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials my-md-5 py-120" id="testimonials">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="testimonial-form w-50 d-flex gap-sm-3 gap-xl-5 justify-content-center flex-column flex-wrap align-items-center h-100
+                    mx-auto py-3">
+                        <h2 class="text-capitalize mb-md-4 w-100 text-center fw-600 barlow letter-spacing-02">Que pensez-vous de nous ?</h2>
+                        {% for message in app.flashes('success') %}
+                            <div class="alert alert-success d-flex align-items-center" role="alert">
+                                <span class="material-icons-outlined">task_alt</span>
+                                <div>
+                                    {{ message }}
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {{ form_start(testyForm, {'attr': {'class': 'w-100'}}) }}
+                        <div class="mb-3">
+                            {{ form_row(testyForm.name) }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form_row(testyForm.comment) }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form_row(testyForm.rate) }}
+                            <div class="d-flex justify-content-between">
+                                <small id="rateMin"></small>
+                                <small id="rateMax">5</small>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn bg-red rounded-0 d-flex gap-1 fw-600 align-items-center justify-content-center w-100">
+                            Laisser un avis
+                            <span class="material-icons-outlined">star_border</span>
+                        </button>
+                        {{ form_end(testyForm) }}
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+                    <div id="testimonial-carousel"
+                         class="carousel mt-md-3 h-100 flex-column justify-content-center d-flex align-items-center slide carousel-dark carousel-fade"
+                         data-bs-ride="carousel">
+
+                        <div class="carousel-inner overflow-hidden">
+                            {% for testimonial in testimonials %}
+                                <div class="carousel-item active">
+                                    <div class="carousel-caption d-md-block">
+                                        <h2 class="mb-md-4 barlow fw-600 text-capitalize">Milles <span class="text-red">raisons</span> de nous choisir
+                                        </h2>
+                                        <p class="text-muted mb-0">{{ testimonial.comment }}</p>
+                                    </div>
+                                    <div class="carousel-caption-user-info d-flex justify-content-center align-items-center flex-column">
+                                        <div class="rate d-flex align-items-center gap-1 text-red">
+                                            {{testimonial.rate }} <span class="material-icons-outlined fs-6">grade</span>
+                                        </div>
+                                        <div class="user-info">
+                                            <h4 class="user-name barlow fw-500 letter-spacing-02 text-center">{{  testimonial.name }}</h4>
+                                            <p class="user-title fw-600 text-center">Client Satisfait.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+                        </div>
+                        <div class="carousel-indicators">
+                            {% set i = 0 %}
+                            {% for testimonial in testimonials %}
+                                <button type="button" data-bs-target="#testimonial-carousel" data-bs-slide-to="{{ i }}" class="active bg-red"
+                                        aria-current="true"
+                                        aria-label="Slide {{ i+1 }}"></button>
+                                {% set i = i+1 %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.onload = () => {
+            function handleRange(rangeElement, minLabel, maxLabel, unity = '') {
+                let range = document.getElementById(rangeElement);
+                let min = document.getElementById(minLabel);
+                let max = document.getElementById(maxLabel);
+                let rangeValue = parseInt(range.value).toLocaleString('fr-FR');
+                if (rangeElement !== 'search_vehicle_form_year' && rangeElement !== 'testimonial_form_rate') {
+                    max.innerHTML = `${unity} ${rangeValue}`
+                } else {
+                    min.innerHTML = `${unity} ${range.value}`
+                }
+                range.addEventListener('mousemove', function () {
+                    if (rangeElement !== 'search_vehicle_form_year' && rangeElement !== 'testimonial_form_rate') {
+                        let rangeValue = parseInt(range.value).toLocaleString('fr-FR');
+                        max.innerHTML = `${unity} ${rangeValue}`
+                    } else {
+                        min.innerHTML = `${unity} ${range.value}`
+                    }
+                });
+            }
+
+            handleRange('search_vehicle_form_price', 'priceMin', 'priceMax', '€');
+            handleRange('search_vehicle_form_year', 'yearMin', 'yearMax');
+            handleRange('search_vehicle_form_milliage', 'milliageMin', 'milliageMax', 'Km');
+            handleRange('testimonial_form_rate', 'rateMin', 'rateMax');
+        }
+    </script>
+{% endblock %}

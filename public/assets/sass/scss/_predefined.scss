@@ -1,0 +1,115 @@
+.cormorant-infant {
+    font-family: "Cormorant Infant", serif;
+}
+
+.nunito-sans {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.barlow {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.bg-red {
+    background-color: $primary-red !important;
+    color: $soft-white !important;
+}
+
+.bg-dark {
+    background-color: $font-color !important;
+    color: $soft-white !important;
+}
+
+.bg-white {
+    background-color: $pure-white !important;
+    color: $font-color !important;
+}
+
+.bg-soft-white {
+    background-color: $soft-white !important;
+    color: $font-color !important;
+}
+
+.text-red {
+    color: $primary-red !important;
+}
+
+button.bg-red,
+a.bg-red {
+    background-color: $primary-red !important;
+    color: $soft-white !important;
+
+    &:hover {
+        background-color: $secondary-red !important;
+        color: $soft-white !important;
+    }
+
+}
+
+.py-120 {
+    padding-block-start: 120px !important;
+    padding-block-end: 120px !important;
+
+    @media screen and (max-width: $midle-media) {
+        padding-block-start: 60px !important;
+        padding-block-end: 60px !important;
+    }
+
+    @media screen and (max-width: $md) {
+        padding-block-start: 30px !important;
+        padding-block-end: 30px !important;
+    }
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.fw-800 {
+    font-weight: 800 !important;
+}
+
+.fw-900 {
+    font-weight: 900 !important;
+}
+
+.fz-16 {
+    font-size: 16px !important;
+}
+
+.fz-18 {
+    font-size: 18px !important;
+}
+
+.letter-spacing-02 {
+    letter-spacing: 1.2px;
+}
+
+.letter-spacing-04 {
+    letter-spacing: 1.4px;
+}
+
+.letter-spacing-revert {
+    letter-spacing: revert;
+}
+
+.h-120 {
+    height: 120px !important;
+}
+
+.h-200 {
+    height: 200px !important;
+}
+
+
+body {
+    font-family: $nunito-sans;
+}

@@ -1,0 +1,82 @@
+.our-services {
+    .service-overview {
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-block-end: 1.4rem;
+            font-family: $barlow;
+            letter-spacing: 1.2px;
+
+            @media screen and (max-width: $midle-media) {
+                font-size: revert;
+                font-weight: 600;
+                margin-block-end: 1rem;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 2;
+
+            @media screen and (max-width: $midle-media) {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+
+        .services-list {
+            li {
+                position: relative;
+                font-size: 18px;
+                font-weight: 500;
+                margin-block-end: 12px;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                line-height: 2;
+
+                @media screen and (max-width: $midle-media) {
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+
+                span {
+                    font-size: 18px;
+                    color: $primary-red;
+
+                    @media screen and (max-width: $midle-media) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        button {
+            font-size: 16px;
+            font-weight: 600;
+
+            @media screen and (max-width: $midle-media) {
+                font-size: revert;
+            }
+        }
+    }
+
+    .service-image {
+        position: relative;
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: $primary-red;
+            z-index: -1;
+        }
+    }
+
+
+}

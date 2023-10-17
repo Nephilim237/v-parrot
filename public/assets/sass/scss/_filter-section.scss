@@ -1,0 +1,22 @@
+.search-vehicle {
+
+    input[type=range] {
+        &:focus {
+            outline: none;
+
+            &::-moz-range-thumb {
+                box-shadow: 0 0 0 1px #fff, 0 0 0 .25rem transparentize($color: $primary-red, $amount: 0.65)
+            }
+        }
+
+        &::-moz-range-thumb {
+            background-color: $primary-red;
+        }
+    }
+
+    @media screen and (max-width: $midle-media) {
+        .btn {
+            font-size: revert;
+        }
+    }
+}

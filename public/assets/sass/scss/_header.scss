@@ -1,0 +1,76 @@
+header {
+
+    //Style CSS Top-header
+    .top-header {
+        .y-brand {
+            width: 240px;
+        }
+
+        .top-nav {
+
+            .material-icons-sharp,
+            .material-icons-outlined {
+                font-size: 40px;
+                color: $primary-red;
+            }
+
+            a {
+                text-decoration: none;
+                font-family: $barlow;
+                font-weight: 500;
+
+                &>* {
+                    display: block;
+                }
+
+                span:first-child {
+                    font-size: 17px;
+                    color: $primary-red;
+                }
+
+                span:nth-child(2) {
+                    font-size: 19px;
+                    color: $font-color;
+                    line-height: 1.2;
+                }
+            }
+
+            @media screen and (max-width: 860px) {
+                display: none;
+            }
+        }
+    }
+
+    // Styles CSS Main-header
+    .main-header {
+        background-color: $primary-red;
+
+        .nav-link {
+            padding-block: 12px;
+            padding-inline: 24px !important;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            color: $soft-white;
+            transition: .25s ease-in-out;
+
+            &.active {
+                color: $pure-white;
+            }
+
+            &:hover {
+                color: $primary-red;
+                background-color: $soft-white;
+            }
+        }
+
+        button {
+            border: 1px solid $soft-white;
+
+            &:hover {
+                color: $primary-red;
+                background-color: $soft-white;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Favicon links -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('/site.webmanifest') }}">
+
+        <!-- Google Material Icons link -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+        <!-- Bootstrap 5 CSS link -->
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+
+        <!-- Our CSS link -->
+        <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+
+
+        <title>{% block title %}Accueil{% endblock %} | Garage V. Parrot </title>
+
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="header bg-white" id="header">
+            <div class="top-header " id="top-header">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <div class="y-brand">
+                        <img src="{{ asset('assets/images/marque/garage-v-parrot-logo-marque.png') }}" alt="Logo de garage V. Parrot" class="img-fluid">
+                    </div>
+                    <nav class="top-nav py-4">
+                        <ul class="d-flex gap-3">
+                            <li class="border-end d-flex gap-3 px-3 justify-content-center align-items-center">
+                                <span class="material-icons-outlined">
+                                    location_on
+                                </span>
+                                <a href="#">
+                                    <span class="topbar-item-label">Ou Sommes-nous?</span>
+                                    <span>35 rue Coding, Suisse</span>
+                                </a>
+                            </li>
+                            <li class="border-end d-flex gap-3 px-3 justify-content-center align-items-center">
+                                <span class="material-icons-outlined">
+                                    support_agent
+                                </span>
+                                <a href="#">
+                                    <span class="topbar-item-label">Support en ligne</span>
+                                    <span>codingcity237@gmail.com</span>
+                                </a>
+                            </li>
+                            <li class=" d-flex gap-3 px-3 justify-content-center align-items-center">
+                                <span class="material-icons-outlined">
+                                    phone_callback
+                                </span>
+                                <a href="#">
+                                    <span class="topbar-item-label">Contact</span>
+                                    <span>00237 6 94 37 25 72</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="main-header" id="main-header">
+                <nav class="navbar navbar-expand-lg sticky-top">
+                    <div class="container">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase active" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#">Véhicules</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#">Contact</a>
+                                </li>
+
+                                {% if app.user %}
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle fw-700" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            {{ app.user.fullname }}
+                                        </a>
+                                        <ul class="dropdown-menu rounded-0 w-100">
+                                            <li><a class="dropdown-item" href="{{ path('admin') }}">Tableau de bord</a></li>
+                                            <li><a class="dropdown-item" href="{{ path('profile', {id: app.user.id}) }}">Mon Profil</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item fw-700" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                                        </ul>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn d-flex align-items-center justify-content-center border-0" type="submit">
+                                <span class="material-icons-sharp">
+                                    search
+                                </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        {% block body %}{% endblock %}
+
+        <footer class="py-120 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-6 col-sm-12 mb-3">
+                        <div class="footer-item">
+                            <h4 class="barlow text-red">Informations Utiles</h4>
+                            <ul class="contact-info list-unstyled">
+                                <li>
+                                    <span class="material-icons-outlined">place</span>
+                                    Yde - Nkomo, Residence des palmiers
+                                </li>
+                                <li>
+                                    <span class="material-icons-outlined">
+                                        email
+                                    </span>
+                                    codingcity237@gmail.com
+                                </li>
+                                <li>
+                                    <span class="material-icons-outlined">
+                                        phone
+                                    </span>
+                                    00237 6 94 37 25 72
+                                </li>
+                                <li>
+                                    <span class="material-icons-outlined">
+                                        public
+                                    </span>
+                                    <a href="#">CodingCity.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 mb-3">
+                        <div class="footer-item">
+                            <h4 class="barlow text-red">Liens Utiles</h4>
+                            <ul class="contact-info list-unstyled">
+                                <li>
+                                    <a href="#">Accueil</a>
+                                </li>
+                                <li>
+                                    <a href="#">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#">Vehicules</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+.detail-banner {
+    height: 360px;
+    position: relative;
+    //background: linear-gradient(to bottom, transparentize($color: #000000, $amount: .65), transparentize($color: #000000, $amount: .25)), url("../images/banner/auto-2179220_640.jpg") center center no-repeat;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    text-align: center;
+
+    @media screen and (max-width: $md) {
+        height: 160px;
+    }
+
+}

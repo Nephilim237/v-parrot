@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ vehicle.brand }} {{ vehicle.model }}{% endblock %}
+
+{% block body %}
+
+    <body class="bg-soft-white">
+        <section class="detail-banner"
+                 style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.75)),
+                         url({{ asset('upload/images/vehicles-illustration/' ~ vehicle.image) }}) ;">
+            <div class="container h-100">
+                <div class="breadcrumb-container h-100">
+                    <div class="breadcrumb-area d-flex justify-content-center align-items-center flex-column h-100">
+                        <h1 class="text-light fw-700 barlow">{{ vehicle.fullBrand }}</h1>
+                        <ul class="breadcrumb d-flex gap-2 text-light fw-600">
+                            <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                            <li>/ Véhicules</li>
+                            <li>/ {{ vehicle.fullBrand }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="car-details py-120">
+            <div class="container">
+                <div class="d-flex mb-md-3 w-100 justify-content-between align-items-center">
+                    <h3 class="car-name barlow fw-600 letter-spacing-02 text-capitalize">{{ vehicle.fullBrand }}</h3>
+                    <h3 class="car-price barlow letter-spacing-02 fw-600 text-red">${{ vehicle.price }}</h3>
+                </div>
+                <div class="row">
+                    <div class="car-details-section bg-white p-3">
+                        <div class="car-pictures">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12 mb-3">
+                                    <div class="d-flex justify-content-between align-items-center gap-3 flex-md-column flex-sm-row">
+                                        {% for image in vehicle.galleries %}
+                                            <div class="car-thumbnail">
+                                                <img src="{{ asset('upload/images/vehicles-illustration/' ~ image.image) }}" class="img-fluid
+                                                rounded-1"
+                                                     alt="">
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-12">
+                                    <div class="car-picture-main">
+                                        <img src="{{ asset('upload/images/vehicles-illustration/' ~ vehicle.image) }}" class="w-100 rounded-1" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-desc mt-3">
+                    <h3 class="barlow letter-spacing-02 text-red">Description</h3>
+                    {{ vehicle.description | raw }}
+                </div>
+
+                <div class="row" id="orderForm">
+                    <div class="col-md-8 col-sm-10">
+                        <div class="contact-form py-3">
+                            <h4 class="text-capitalize mb-3 fw-600 barlow letter-spacing-02">
+                                Commander la <span class="text-red">{{ vehicle.fullBrand }}</span>
+                            </h4>
+
+                            {% for message in app.flashes('success') %}
+                                <div class="alert alert-success d-flex align-items-center" role="alert">
+                                    <span class="material-icons-outlined">task_alt </span>
+                                    <div>
+                                        {{ message }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                            {{ form_start(form) }}
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 mb-3">
+                                    {{ form_row(form.name) }}
+                                </div>
+                                <div class="col-md-6 col-sm-12 mb-3">
+                                    {{ form_row(form.email) }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 mb-3">
+                                    {{ form_row(form.subject) }}
+                                </div>
+                                <div class="col-md-6 col-sm-12 mb-3">
+                                    {{ form_row(form.phone) }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    {{ form_row(form.message) }}
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn bg-red rounded-0  d-flex gap-1 align-items-center">
+                                        Envoyer le message
+                                        <span class="material-icons-outlined">send</span>
+                                    </button>
+                                </div>
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </body>
+{% endblock %}

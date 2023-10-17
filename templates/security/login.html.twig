@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <section class="login-page bg-light py-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <h3 class="mb-3 text-red">Se Connecter</h3>
+                    <div class="bg-white shadow">
+                        <div class="row">
+                            <div class="col-md-7 pe-0">
+                                <div class="form-left h-100 py-5 px-5">
+                                    <form class="row  g-4" method="post">
+
+
+                                        {% if error %}
+                                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                        {% endif %}
+
+                                        {% if app.user %}
+                                            <div class="mb-3">
+                                                You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                                            </div>
+                                        {% endif %}
+
+
+                                        <div class="col-12">
+                                            <label for="inputEmail">Email <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <div class="input-group-text rounded-0">
+                                                    <span class="material-icons-sharp">
+                                                        person
+                                                    </span>
+                                                </div>
+                                                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control
+                                                rounded-0" autocomplete="email" required autofocus>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="inputPassword">Mot de passe <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <div class="input-group-text rounded-0">
+                                                    <span class="material-icons-sharp">
+                                                        key
+                                                    </span>
+                                                </div>
+                                                <input type="password" name="password" id="inputPassword" class="form-control rounded-0"
+                                                       autocomplete="current-password" placeholder="Mot de passe" required>
+                                            </div>
+                                        </div>
+
+
+                                        <input type="hidden" name="_csrf_token"
+                                               value="{{ csrf_token('authenticate') }}"
+                                        >
+
+                                        {#
+                                        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                                        See https://symfony.com/doc/current/security/remember_me.html
+
+                                        <div class="checkbox mb-3">
+                                            <label>
+                                                <input type="checkbox" name="_remember_me"> Remember me
+                                            </label>
+                                        </div>
+                                        #}
+
+                                        <div class="col-12">
+                                            <button type="submit" class="btn bg-red px-4 rounded-0 float-end mt-4">login</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 ps-0 d-none d-md-block form-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
